@@ -1,0 +1,678 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #07100f;
+    color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    background: #07100f;
+}
+
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+
+.hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("./images/hero_image.png");
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 10, 9, 0.78),
+            rgba(2, 10, 9, 0.151),
+            rgba(2, 10, 9, 0.65)
+        );
+
+    z-index: 1;
+}
+
+
+/* Additional darkness */
+
+.overlay::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.199),
+            transparent 30%,
+            rgba(0, 0, 0, 0.603)
+        );
+}
+
+
+/* =========================
+   TOP MENU
+========================= */
+
+.menu {
+    position: absolute;
+
+    top: 20px;
+    left: 35px;
+
+    z-index: 5;
+
+    color: #e8dfc7;
+
+    font-size: 25px;
+
+    letter-spacing: -0.3px;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 34px;
+    padding: 17px 60px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 46px;
+    height: 5px;
+    background: #e8dfc7;
+    transition: transform 0.3s, opacity 0.3s;
+
+}
+
+.menu-nav {
+    display: none;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    padding: 22px 28px;
+    background: rgba(7, 16, 15, 0.94);
+}
+
+.menu-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+}
+
+.menu-nav li {
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+.menu-nav a {
+    color: #e8dfc7;
+    text-decoration: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.menu-nav li {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-nav li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #f6e6c1;
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.menu-nav li:hover::before {
+    transform: translateX(0);
+}
+
+.menu-nav a {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.menu-nav a:hover {
+    color: black;
+}
+
+.menu.is-open .menu-nav {
+    display: block;
+}
+
+.menu.is-open .menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu.is-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.is-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================
+   CONTACT BUTTON
+========================= */
+
+.contact {
+    position: absolute;
+
+    top: 18px;
+    right: 34px;
+
+    z-index: 5;
+
+    color: #eee5d3;
+
+    text-decoration: none;
+
+    font-size: 28px;
+
+    padding: 2px 5px;
+
+    border-bottom: 1px solid rgba(230, 220, 200, 0.5);
+
+    transition: 0.3s;
+
+    overflow: hidden;
+
+    padding: 17px 60px;
+}
+
+.contact:hover::before {
+  transform: translateX(0);
+}
+
+.contact:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f6e6c1;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+
+.contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact:hover {
+    color: black;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+.hero-content {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 4;
+}
+
+
+
+.description {
+    position: absolute;
+
+    top: 185px;
+    left: 34px;
+
+    z-index: 5;
+
+    max-width: 490px;
+
+    color: #899b97;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+    padding: 22px 53px;
+
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    position: absolute;
+
+    right: 92px;
+    top: 595px;
+
+    z-index: 5;
+
+    color: #899b97;
+
+    font-size: 23px;
+
+    line-height: 1.8;
+}
+
+.services li {
+    margin-bottom: 6px;
+
+    list-style:circle;
+}
+
+.services ul li::marker {
+    color: #f6e6c1;
+
+    font-size: 28px;
+}
+
+.services li a {
+    color: #899b97;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.services li a:hover {
+    color: #f6e6c1;
+}
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.hero-title {
+    position: absolute;
+
+    left: 50%;
+    bottom: 189px;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    z-index: 4;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+}
+
+.hero-title h1 {
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(90px, 10vw, 185px);
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    letter-spacing: 1px;
+
+    color: #f6e6c1;
+
+    text-transform: uppercase;
+
+    padding: 22px 28px;
+
+}
+
+.hero-title span {
+    color: #909e9bcb;
+}
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.socials ul {
+    position: absolute;
+
+    left: 34px;
+    bottom: 17px;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 48px;
+
+    padding: 22px 28px;
+
+}
+
+.socials li {
+    list-style:none;
+
+}
+
+.socials i {
+    font-size: 23px;
+
+    padding-right: 15px;
+}
+
+.socials a {
+    color: #899b97;
+
+    font-size: 23px;
+
+    text-decoration:none;
+}
+
+.socials a:hover {
+    color: #f6e6c1;
+}
+
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll {
+    position: absolute;
+
+    left: 50%;
+    bottom: 14px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.scroll-line {
+    width: 1px;
+
+    height: 30px;
+
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.scroll span {
+    color: #777d7b;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   SIDE LINES
+========================= */
+
+.side-line {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 23px;
+
+    z-index: 5;
+
+    opacity: 1.45;
+}
+
+.left-line {
+    left: 9px;
+}
+
+.right-line {
+    right: 9px;
+}
+
+
+/* Main vertical line */
+
+.side-line::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: rgba(160, 175, 170, 0.35);
+}
+
+
+/* =========================
+   TICK MARKS
+========================= */
+
+.ticks {
+    position: absolute;
+
+    inset: 0;
+
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 8px,
+        rgba(160, 175, 170, 0.849) 8px,
+        transparent 10px,
+        transparent 18px
+    );
+}
+
+/* =========================
+   SCROLL LINE
+========================= */
+.scroll-line {
+    position: absolute;
+    left: 50%;
+    bottom: 49px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    height: 7cap;
+
+    border: 2px solid rgba(255, 255, 255, 0.6);
+
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    30% {
+        transform: translateX(-50%) translateY(12px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(4px);
+    }
+}
+
+
+.scroll-line p {
+    display: block;
+
+    width: 100%;
+
+    height: 5px;
+
+    font-size: 10px;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .description {
+        top: 150px;
+        left: 30px;
+
+        font-size: 12px;
+    }
+
+    .services {
+        right: 35px;
+        top: 330px;
+
+        font-size: 11px;
+    }
+
+    .hero-title {
+        bottom: 110px;
+    }
+
+    .hero-title h1 {
+        font-size: 14vw;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .menu {
+        left: 20px;
+        top: 18px;
+    }
+
+    .contact {
+        right: 20px;
+    }
+
+    .description {
+        top: 120px;
+        left: 22px;
+
+        max-width: 180px;
+
+        font-size: 11px;
+    }
+
+    .services {
+        right: 22px;
+        top: 300px;
+
+        font-size: 10px;
+    }
+
+    .hero-title {
+        bottom: 120px;
+    }
+
+    .hero-title h1 {
+        font-size: 15vw;
+    }
+
+    .socials {
+        left: 20px;
+        bottom: 18px;
+
+        gap: 10px;
+    }
+
+    .socials a {
+        font-size: 10px;
+    }
+
+    .side-line {
+        width: 12px;
+    }
+
+}
