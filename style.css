@@ -14,6 +14,8 @@ body {
     font-family: "Inter", sans-serif;
     background: #07100f;
     color: white;
+    height: auto;
+    
 }
 
 
@@ -303,7 +305,7 @@ body {
    SERVICES
 ========================= */
 
-.services {
+.hero-content .services {
     position: absolute;
 
     right: 92px;
@@ -318,19 +320,19 @@ body {
     line-height: 1.8;
 }
 
-.services li {
+.hero-content .services li {
     margin-bottom: 6px;
 
     list-style:circle;
 }
 
-.services ul li::marker {
+.hero-content .services ul li::marker {
     color: #f6e6c1;
 
     font-size: 28px;
 }
 
-.services li a {
+.hero-content .services li a {
     color: #899b97;
 
     text-decoration: none;
@@ -338,7 +340,7 @@ body {
     transition: 0.3s;
 }
 
-.services li a:hover {
+.hero-content .services li a:hover {
     color: #f6e6c1;
 }
 
@@ -404,7 +406,7 @@ body {
 
     gap: 48px;
 
-    padding: 22px 28px;
+    padding: 22px 50px;
 
 }
 
@@ -453,6 +455,13 @@ body {
     align-items: center;
 
     gap: 8px;
+
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.is-scrolling .scroll {
+    opacity: 0;
+    transform: translateX(-50%) translateY(12px);
 }
 
 .scroll-line {
@@ -475,7 +484,7 @@ body {
 ========================= */
 
 .side-line {
-    position: absolute;
+    position: fixed;
 
     top: 0;
     bottom: 0;
@@ -485,6 +494,8 @@ body {
     z-index: 5;
 
     opacity: 1.45;
+    pointer-events: none;
+    overflow: hidden;
 }
 
 .left-line {
@@ -522,6 +533,9 @@ body {
     position: absolute;
 
     inset: 0;
+
+    transform: translateY(calc(var(--scroll-progress, 0) * 36px));
+    transition: transform 0.15s linear;
 
     background-image: repeating-linear-gradient(
         to bottom,
@@ -599,7 +613,7 @@ body {
         font-size: 12px;
     }
 
-    .services {
+    .hero-content .services {
         right: 35px;
         top: 330px;
 
@@ -645,7 +659,7 @@ body {
         font-size: 11px;
     }
 
-    .services {
+    .hero-content .services {
         right: 22px;
         top: 300px;
 
@@ -679,5 +693,166 @@ body {
 
 
 /* =========================
-  Second 2 
+  Third Section/ Service Section CSS  
 ========================= */
+
+.service_section {
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 130px;
+
+    padding: 17em 4em;
+
+    height:100vh;
+
+    justify-content: center;
+
+    background: white;
+
+    width: 100%;
+
+}
+
+.service_section_title {
+    font-size: clamp(30px, 5vw, 70px);
+
+    color: #f6e6c1;
+
+    text-align: center;
+
+    margin-bottom: 1em;
+
+    position: relative;
+
+}
+
+.service_section_title h1 {
+    font-family: "Anton", sans-serif;
+
+    color: #f6e6c1;
+
+    text-align: center;
+
+    margin-bottom: 1em;
+
+    position: relative;
+
+    left: -1.3em;
+}
+
+
+.services {
+    display: flex;
+
+    position: relative;
+
+    top: 90px;
+
+    flex-direction:  column;
+
+    gap: 80px;
+
+    justify-content: center;
+
+}
+
+.service_1, .service_2, .service_3, 
+.service_4 {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+
+    justify-content: center;
+
+    width: clamp(200px, 26vw, 1200px);
+
+}
+
+.service_1 i,.service_2 i, .service_3 i, .service_4 i {
+    
+    font-size: 2.5em;
+
+    color: black;
+
+}
+
+.service_1 h2, .service_2 h2, .service_3 h2, .service_4 h2 {
+    font-size: clamp(20px, 3vw, 50px);
+
+    color: black;
+
+    margin-bottom: 0.5em;
+}
+
+
+.service_1 p, .service_2 p, .service_3 p, .service_4 p {
+    font-size: clamp(15px, 1.5vw, 20px);
+
+    color: black;
+
+    line-height: 1.5;
+
+    text-align: justify;
+}
+
+.services hr {
+    border: 2px solid #f6e6c1;
+
+    width: 100%;
+
+    margin-top: 1em;
+}
+
+
+@media (max-width: 600px){
+
+    .service_section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 30px 16px;
+        padding: 5rem 1rem 3rem;
+        height: auto;
+
+    }
+
+    .service_section_title {
+        flex: 0 0 100%;
+        margin-bottom: 0;
+    }
+
+    .service_section_title h1 {
+        left: 0;
+        margin-bottom: 0;   
+        font-size: clamp(20px, 18vw, 100px);
+    }
+
+    .service_section > .services {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 0;
+        top: 0px;
+        gap: 35px;  
+        padding: 0 18px;
+    }
+
+    .service_section > .services .service_1,
+    .service_section > .services .service_2,
+    .service_section > .services .service_3,
+    .service_section > .services .service_4 {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .service_section > .services p {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .service_section > .services h2 {
+        font-size: 18px;
+    }
+}
