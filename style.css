@@ -693,6 +693,14 @@ body.is-scrolling .scroll {
 
 
 /* =========================
+  Second Section/ About  Section CSS  
+========================= */
+
+
+
+
+
+/* =========================
   Third Section/ Service Section CSS  
 ========================= */
 
@@ -807,6 +815,10 @@ body.is-scrolling .scroll {
     margin-top: 1em;
 }
 
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px){
 
