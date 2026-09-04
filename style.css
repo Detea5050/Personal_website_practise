@@ -709,7 +709,7 @@ body.is-scrolling .scroll {
 
     flex-direction: row;
 
-    gap: 130px;
+    gap: 80px;
 
     padding: 17em 4em;
 
@@ -724,7 +724,7 @@ body.is-scrolling .scroll {
 }
 
 .service_section_title {
-    font-size: clamp(30px, 5vw, 70px);
+    font-size: clamp(30px, 7vw, 90px);
 
     color: #f6e6c1;
 
@@ -739,7 +739,7 @@ body.is-scrolling .scroll {
 .service_section_title h1 {
     font-family: "Anton", sans-serif;
 
-    color: #f6e6c1;
+    color: #9c844c;
 
     text-align: center;
 
@@ -747,7 +747,9 @@ body.is-scrolling .scroll {
 
     position: relative;
 
-    left: -1.3em;
+    left: -.8em;
+
+    top: -.7em;
 }
 
 
@@ -757,6 +759,8 @@ body.is-scrolling .scroll {
     position: relative;
 
     top: 90px;
+
+    right: -13em;
 
     flex-direction:  column;
 
@@ -776,7 +780,7 @@ body.is-scrolling .scroll {
 
     justify-content: center;
 
-    width: clamp(200px, 26vw, 1200px);
+    width: clamp(200px, 22vw, 900px);
 
 }
 
@@ -784,7 +788,7 @@ body.is-scrolling .scroll {
     
     font-size: 2.5em;
 
-    color: black;
+    color: #9c844c;
 
 }
 
@@ -808,7 +812,7 @@ body.is-scrolling .scroll {
 }
 
 .services hr {
-    border: 2px solid #f6e6c1;
+    border: 2px solid #9c844c;
 
     width: 100%;
 
@@ -867,4 +871,130 @@ body.is-scrolling .scroll {
     .service_section > .services h2 {
         font-size: 18px;
     }
+}
+
+
+
+/* =========================
+  Fourth Section/ Certifications Section CSS  
+========================= */
+
+.cert_section {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    width: 100%;
+    
+    height: 100vh;
+
+    padding: 10rem 0rem 0rem 7rem;
+
+    background-color: #193d2ead;
+
+    overflow: hidden;
+
+    gap:8em;
+}
+
+
+/* Dark overlay */
+.cert_section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 0;
+}
+
+.certs-container {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 40%;
+
+    gap: 3rem;
+
+    padding-top:18em;
+
+}
+
+
+
+.certs {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    gap: 3rem;
+
+    white-space: nowrap;
+
+    font-size: clamp(12px, 3vw, 30px);
+}
+
+
+.certs p {
+    margin: 0;
+
+    color: #9c844c;
+
+    white-space: nowrap;
+}
+
+
+
+.certs-container hr {
+    width: 100%;
+
+    margin: 0;
+
+    border: none;
+
+    border-top: 1.8px solid #ffffff;
+
+
+}
+
+
+
+.cert_section_title {
+    position: relative;
+
+    top:-15em;
+
+    z-index: 1;
+
+    height: 5em;
+
+    width: 50%;
+
+    font-size: 2em;
+
+    color: #9c844c;
+
+    text-align: center;
+}
+
+.cert_section_title h1{
+    font-size: 6em;
 }
