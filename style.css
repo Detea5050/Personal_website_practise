@@ -731,6 +731,8 @@ body.is-scrolling .scroll {
   overflow: hidden;
 
   gap: 8em;
+
+  font-family: "Anton", sans-serif;
 }
 
 /* Dark overlay */
@@ -817,10 +819,45 @@ body.is-scrolling .scroll {
 }
 
 .cert_section_title h1 {
-  font-size: 6em;
+  font-size: 6rem;
 }
 
 
 /* =========================
   Fifth Section/ Education Section CSS  
 ========================= */
+
+
+.edu_section{
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: .5rem;
+
+  padding: 9rem 8rem;
+
+  height: 100vh;
+}
+
+.edu-container{
+  display: flex;
+
+  flex-direction: column;
+}
+
+.edu-container img {
+    width: 50rem;
+
+    height: 75rem;
+
+    border: 10px solid white;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
