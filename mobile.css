@@ -63,7 +63,12 @@
   }
 
   .description {
-   display: none;
+    top: 112px;
+    left: 22px;
+    max-width: 205px;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.45;
   }
 
   .hero-content .services {
@@ -184,7 +189,7 @@
     justify-content: center;
     height: auto;
     min-height: 100svh;
-    gap: 23rem;
+    gap: 3rem;
     padding: 5rem 28px;
   }
 
@@ -202,7 +207,6 @@
   .certs h1 {
     white-space: normal;
     line-height: 1.2;
-    font-size: clamp(19px, 2vw, 28px);
   }
 
   .cert_section_title {
@@ -214,7 +218,7 @@
   }
 
   .cert_section_title h1 {
-    font-size: clamp(48px, 13vw, 90px);
+    font-size: clamp(48px, 15vw, 90px);
     line-height: 0.9;
   }
 }

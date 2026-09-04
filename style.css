@@ -839,7 +839,7 @@ body.is-scrolling .scroll {
 
   gap: .5rem;
 
-  padding: 9rem 8rem;
+  padding: 9rem 7.5rem;
 
   height: 100vh;
 }
@@ -850,14 +850,131 @@ body.is-scrolling .scroll {
   flex-direction: column;
 }
 
-.edu-container img {
-    width: 50rem;
+.edu-container h1{
+  font-size: 9rem;
 
-    height: 75rem;
+  text-align: center;
+
+  position: relative;
+
+  top: -6rem;
+
+  color: #9c844c;
+}
+
+.edu-container img {
+    width: 38rem;
+
+    height: 50rem;
+
+    position: relative;
+
+    right:-70px;
 
     border: 10px solid white;
 
     border-radius: 50%;
 
     overflow: hidden;
+}
+
+
+
+.schools{
+
+  display: flex;
+
+  flex-direction: column;
+
+
+  gap: 5rem;
+
+
+}
+
+ /* the vertical line style */
+.grade1:not(:last-child)::after, .grade2:not(:last-child)::after, .grade3:not(:last-child)::after, .grade4:not(:last-child)::after{
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -80px;
+
+    width: 2px;
+
+    height: 70px;
+
+    background: white;
+}
+
+.grade1, .grade2, .grade3, .grade4 {
+  display: flex;
+
+  flex-direction: row;
+
+  gap: 6rem;
+
+  border: 1px solid rgb(8, 8, 8) ;
+
+  border-radius: 13px;
+
+  padding: 5rem 1rem;
+
+  width: 100%;
+
+  position: relative;
+
+  background-color: black;
+
+}
+
+.grade1 i,.grade2 i, .grade3 i, .grade4 i {
+  font-size: 3rem;
+
+  color:#9c844c
+}
+
+
+.grade1 span, .grade2 span, .grade3 span, .grade4 span{
+  display: flex;
+
+  flex-direction: row;
+
+  border:1px solid white;
+
+  height: 10px;
+
+  width: 10px;
+
+  border-radius: 50%;
+}
+
+.dot{
+  display: flex;
+
+  flex-direction: row;
+
+  gap: 10px;
+
+  align-items: center;
+
+  margin-left: auto;
+}
+
+.grade1 .dot span:nth-child(1) {
+    background: red;
+}
+
+.grade2 .dot span:nth-child(1), .grade2 .dot span:nth-child(2) {
+    background: red;
+}
+
+.grade3 .dot span:nth-child(1), .grade3 .dot span:nth-child(2), .grade3 .dot span:nth-child(3) {
+    background: red;
+}
+
+.grade4 .dot span:nth-child(1), .grade4 .dot span:nth-child(2), .grade4 .dot span:nth-child(3), .grade4 .dot span:nth-child(4) {
+    background: red;
 }
