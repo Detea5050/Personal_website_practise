@@ -4,7 +4,10 @@
   box-sizing: border-box;
 }
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -202,40 +205,6 @@ body {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* =========================
-   Footer Logo Styling
-========================= */
-.da-logo {
-  position: relative;
-
-  display: inline-block;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 8rem;
-
-  font-weight: 400;
-
-  letter-spacing: -0.18em;
-
-  color: #fff;
-}
-
-.da-logo span:last-of-type {
-  margin-left: -0.02em;
-}
-
-.da-line {
-  position: absolute;
-  width: 3px;
-  height: 120%;
-
-  top: -10%;
-  left: 52%;
-
-  background: #C9A227;
-  transform: rotate(35deg);
-}
 
 /* =========================
    CONTACT BUTTON
@@ -1153,6 +1122,24 @@ body.is-scrolling .scroll {
   font-family: "Anton", sans-serif;
 
   transform: scaleY(1.3);
+
+  animation: bounce 1.9s ease-in-out infinite;
+}
+
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+
+  30% {
+    transform: translateX(0) translateY(42px);
+  }
+
+  60% {
+    transform: translateX(0) translateY(74px);
+  }
 }
 
 /* =========================
@@ -1239,4 +1226,45 @@ button {
 
 .form button:hover{
   background:#C9A227;
+}
+
+/* =========================
+   Footer Logo Styling
+========================= */
+.da-logo {
+  position: relative;
+
+  top: 4rem;
+
+  display: inline-block;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 8rem;
+
+  font-weight: 400;
+
+  letter-spacing: -0.18em;
+
+  color: #fff;
+}
+
+.da-logo span:last-of-type {
+  margin-left: -0.02em;
+}
+
+.da-line {
+  position: absolute;
+
+  width: 3px;
+
+  height: 120%;
+
+  top: -10%;
+
+  left: 52%;
+
+  background: #C9A227;
+
+  transform: rotate(35deg);
 }
