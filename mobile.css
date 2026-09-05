@@ -221,6 +221,53 @@
     font-size: clamp(48px, 15vw, 90px);
     line-height: 0.9;
   }
+
+  /* Education */
+  .edu_section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4rem;
+    height: auto;
+    min-height: 100svh;
+    padding: 5rem 28px 6rem;
+  }
+
+  .edu-container {
+    top: 0;
+    width: 100%;
+    padding: 0 0 0 1.25rem;
+  }
+
+  .edu-container h1 {
+    top: 0;
+    font-size: clamp(4rem, 18vw, 7rem);
+    text-align: left;
+  }
+
+  .edu-container img {
+    right: 0;
+    width: min(100%, 22rem);
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .author_text {
+    width: 100%;
+    margin-top: 0;
+    gap: 1rem;
+  }
+
+  .author_text h2 {
+    font-size: 1rem;
+  }
+
+  .schools {
+    width: 100%;
+    gap: 4rem;
+  }
+
+  
 }
 
 @media (max-width: 420px) {
@@ -269,8 +316,14 @@
   .scroll-line,
   .menu-toggle span,
   .menu-nav li::before,
-  .contact::before {
+  .contact::before,
+  .grade1,
+  .grade2,
+  .grade3,
+  .grade4 {
     animation: none;
     transition: none;
+    opacity: 1;
+    transform: none;
   }
 }

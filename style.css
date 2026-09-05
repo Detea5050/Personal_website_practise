@@ -837,47 +837,127 @@ body.is-scrolling .scroll {
 
   align-items: center;
 
-  gap: .5rem;
+  gap: clamp(3rem, 8vw, 10rem);
 
-  padding: 9rem 7.5rem;
+  padding: 8rem clamp(2rem, 7vw, 7.5rem);
 
-  height: 100vh;
+  min-height: 100vh;
+
+  overflow: hidden;
 }
 
 .edu-container{
   display: flex;
 
+  position: relative;
+
+  top: 0;
+
   flex-direction: column;
+
+  gap: 2rem;
+
+  width: min(38rem, 100%);
+
+  padding: 0 0 0 2rem;
+
+  border-left: 3px solid #9c844c;
 }
 
 .edu-container h1{
-  font-size: 9rem;
+  margin: 0;
 
-  text-align: center;
+  font-size: clamp(5rem, 8vw, 9rem);
+
+  font-family: "Anton", sans-serif;
+
+  font-weight: 400;
+
+  line-height: .85;
+
+  text-align: left;
 
   position: relative;
 
-  top: -6rem;
+  top: 0;
 
   color: #9c844c;
+
+  letter-spacing: .02em;
 }
 
 .edu-container img {
-    width: 38rem;
+    width: min(100%, 36rem);
 
-    height: 50rem;
+    height: 60rem;
 
     position: relative;
 
-    right:-70px;
+    right: 0;
 
     border: 10px solid white;
 
-    border-radius: 50%;
+    border-radius: 1rem;
 
     overflow: hidden;
+
+    object-fit: cover;
+
+    margin-top: 3rem;
+
+    margin-bottom: 3rem;
+
+    box-shadow: 14px 14px 0 rgba(156, 132, 76, 0.2);
+
+    transition: transform .4s ease, box-shadow .4s ease;
+  }
+
+  .edu-container img:hover {
+    transform: translateY(-18px);
+
+    box-shadow: 14px 22px 0 rgba(156, 132, 76, 0.24);
 }
 
+
+.author_text{
+  display: flex;
+
+  flex-direction: row;
+
+  gap: 1.25rem;
+
+  width: 100%;
+
+  margin-top: 1rem;
+
+  align-items: flex-start;
+
+  color: #899b97;
+}
+
+.author_text i {
+  flex: 0 0 auto;
+
+  padding: 1.25rem;
+
+  color: #9c844c;
+
+  font-size: 2.85rem;
+
+  transform: rotate(-90deg);
+}
+
+.author_text h2 {
+  margin: 0;
+
+  font-size: clamp(1rem, 1.35vw, 1.35rem);
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: #899b97;
+}
 
 
 .schools{
@@ -888,6 +968,8 @@ body.is-scrolling .scroll {
 
 
   gap: 5rem;
+
+  overflow: hidden;
 
 
 }
@@ -928,6 +1010,9 @@ body.is-scrolling .scroll {
 
   background-color: black;
 
+
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .grade1 i,.grade2 i, .grade3 i, .grade4 i {
@@ -963,6 +1048,8 @@ body.is-scrolling .scroll {
   margin-left: auto;
 }
 
+/* dot dot color styling */
+
 .grade1 .dot span:nth-child(1) {
     background: red;
 }
@@ -977,4 +1064,12 @@ body.is-scrolling .scroll {
 
 .grade4 .dot span:nth-child(1), .grade4 .dot span:nth-child(2), .grade4 .dot span:nth-child(3), .grade4 .dot span:nth-child(4) {
     background: red;
+}
+
+.grade_text{
+   display: flex;
+
+   flex-direction: column;
+
+   gap: 20px;
 }
