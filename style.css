@@ -99,7 +99,7 @@ body {
 
   z-index: 5;
 
-  color: #e8dfc7;
+  color: #C9A227;
 
   font-size: 25px;
 
@@ -121,7 +121,7 @@ body {
   display: block;
   width: 46px;
   height: 5px;
-  background: #e8dfc7;
+  background: #C9A227;
   transition:
     transform 0.3s,
     opacity 0.3s;
@@ -151,7 +151,7 @@ body {
 }
 
 .menu-nav a {
-  color: #e8dfc7;
+  color: #C9A227;
   text-decoration: none;
   white-space: nowrap;
   text-transform: uppercase;
@@ -166,7 +166,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: #f6e6c1;
+  background: #C9A227;
   transform: translateX(-100%);
   transition: transform 0.35s ease;
   z-index: 0;
@@ -203,6 +203,41 @@ body {
 }
 
 /* =========================
+   Footer Logo Styling
+========================= */
+.da-logo {
+  position: relative;
+
+  display: inline-block;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 8rem;
+
+  font-weight: 400;
+
+  letter-spacing: -0.18em;
+
+  color: #fff;
+}
+
+.da-logo span:last-of-type {
+  margin-left: -0.02em;
+}
+
+.da-line {
+  position: absolute;
+  width: 3px;
+  height: 120%;
+
+  top: -10%;
+  left: 52%;
+
+  background: #C9A227;
+  transform: rotate(35deg);
+}
+
+/* =========================
    CONTACT BUTTON
 ========================= */
 
@@ -215,7 +250,7 @@ body {
 
   z-index: 5;
 
-  color: #eee5d3;
+  color: #C9A227;
 
   text-decoration: none;
 
@@ -238,7 +273,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: #f6e6c1;
+  background: #C9A227;
   transform: translateX(-100%);
   transition: transform 0.35s ease;
   z-index: -1;
@@ -313,7 +348,7 @@ body {
 }
 
 .hero-content .services ul li::marker {
-  color: #f6e6c1;
+  color: #C9A227;
 
   font-size: 28px;
 }
@@ -327,7 +362,7 @@ body {
 }
 
 .hero-content .services li a:hover {
-  color: #f6e6c1;
+  color: #C9A227;
 }
 
 /* =========================
@@ -362,7 +397,7 @@ body {
 
   letter-spacing: 1px;
 
-  color: #f6e6c1;
+  color: #C9A227;
 
   text-transform: uppercase;
 
@@ -412,7 +447,7 @@ body {
 }
 
 .socials a:hover {
-  color: #f6e6c1;
+  color: #C9A227;
 }
 
 /* =========================
@@ -608,7 +643,7 @@ body.is-scrolling .scroll {
 .service_section_title {
   font-size: clamp(30px, 7vw, 90px);
 
-  color: #f6e6c1;
+  color: #C9A227;
 
   text-align: center;
 
@@ -620,7 +655,7 @@ body.is-scrolling .scroll {
 .service_section_title h1 {
   font-family: "Anton", sans-serif;
 
-  color: #9c844c;
+  color: #C9A227;
 
   text-align: center;
 
@@ -670,7 +705,7 @@ body.is-scrolling .scroll {
 .service_4 i {
   font-size: 2.5em;
 
-  color: #9c844c;
+  color: #C9A227;
 }
 
 .service_1 h2,
@@ -698,14 +733,12 @@ body.is-scrolling .scroll {
 }
 
 .services hr {
-  border: 2px solid #9c844c;
+  border: 2px solid #C9A227;
 
   width: 100%;
 
   margin-top: 1em;
 }
-
-
 
 /* =========================
   Fourth Section/ Certifications Section CSS  
@@ -785,7 +818,7 @@ body.is-scrolling .scroll {
 .certs p {
   margin: 0;
 
-  color: #9c844c;
+  color: #C9A227;
 
   white-space: nowrap;
 }
@@ -813,7 +846,7 @@ body.is-scrolling .scroll {
 
   font-size: 2em;
 
-  color: #9c844c;
+  color: #C9A227;
 
   text-align: center;
 }
@@ -822,13 +855,11 @@ body.is-scrolling .scroll {
   font-size: 6rem;
 }
 
-
 /* =========================
   Fifth Section/ Education Section CSS  
 ========================= */
 
-
-.edu_section{
+.edu_section {
   display: flex;
 
   flex-direction: row;
@@ -846,7 +877,7 @@ body.is-scrolling .scroll {
   overflow: hidden;
 }
 
-.edu-container{
+.edu-container {
   display: flex;
 
   position: relative;
@@ -861,10 +892,10 @@ body.is-scrolling .scroll {
 
   padding: 0 0 0 2rem;
 
-  border-left: 3px solid #9c844c;
+  border-left: 3px solid #C9A227;
 }
 
-.edu-container h1{
+.edu-container h1 {
   margin: 0;
 
   font-size: clamp(5rem, 8vw, 9rem);
@@ -873,7 +904,7 @@ body.is-scrolling .scroll {
 
   font-weight: 400;
 
-  line-height: .85;
+  line-height: 0.85;
 
   text-align: left;
 
@@ -881,45 +912,46 @@ body.is-scrolling .scroll {
 
   top: 0;
 
-  color: #9c844c;
+  color: #C9A227;
 
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
 }
 
 .edu-container img {
-    width: min(100%, 36rem);
+  width: min(100%, 36rem);
 
-    height: 60rem;
+  height: 60rem;
 
-    position: relative;
+  position: relative;
 
-    right: 0;
+  right: 0;
 
-    border: 10px solid white;
+  border: 10px solid white;
 
-    border-radius: 1rem;
+  border-radius: 1rem;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    object-fit: cover;
+  object-fit: cover;
 
-    margin-top: 3rem;
+  margin-top: 3rem;
 
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 
-    box-shadow: 14px 14px 0 rgba(156, 132, 76, 0.2);
+  box-shadow: 14px 14px 0 rgba(201, 162, 39, 0.2);
 
-    transition: transform .4s ease, box-shadow .4s ease;
-  }
-
-  .edu-container img:hover {
-    transform: translateY(-18px);
-
-    box-shadow: 14px 22px 0 rgba(156, 132, 76, 0.24);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
+.edu-container img:hover {
+  transform: translateY(-18px);
 
-.author_text{
+  box-shadow: 14px 22px 0 rgba(201, 162, 39, 0.24);
+}
+
+.author_text {
   display: flex;
 
   flex-direction: row;
@@ -940,7 +972,7 @@ body.is-scrolling .scroll {
 
   padding: 1.25rem;
 
-  color: #9c844c;
+  color: #C9A227;
 
   font-size: 2.85rem;
 
@@ -959,46 +991,47 @@ body.is-scrolling .scroll {
   color: #899b97;
 }
 
-
-.schools{
-
+.schools {
   display: flex;
 
   flex-direction: column;
 
-
   gap: 5rem;
 
   overflow: hidden;
-
-
 }
 
- /* the vertical line style */
-.grade1:not(:last-child)::after, .grade2:not(:last-child)::after, .grade3:not(:last-child)::after, .grade4:not(:last-child)::after{
-    content: "";
+/* the vertical line style */
+.grade1:not(:last-child)::after,
+.grade2:not(:last-child)::after,
+.grade3:not(:last-child)::after,
+.grade4:not(:last-child)::after {
+  content: "";
 
-    position: absolute;
+  position: absolute;
 
-    left: 50%;
+  left: 50%;
 
-    bottom: -80px;
+  bottom: -80px;
 
-    width: 2px;
+  width: 2px;
 
-    height: 70px;
+  height: 70px;
 
-    background: white;
+  background: white;
 }
 
-.grade1, .grade2, .grade3, .grade4 {
+.grade1,
+.grade2,
+.grade3,
+.grade4 {
   display: flex;
 
   flex-direction: row;
 
   gap: 6rem;
 
-  border: 1px solid rgb(8, 8, 8) ;
+  border: 1px solid rgb(8, 8, 8);
 
   border-radius: 13px;
 
@@ -1010,24 +1043,28 @@ body.is-scrolling .scroll {
 
   background-color: black;
 
-
   opacity: 1;
   transform: translateX(0);
 }
 
-.grade1 i,.grade2 i, .grade3 i, .grade4 i {
+.grade1 i,
+.grade2 i,
+.grade3 i,
+.grade4 i {
   font-size: 3rem;
 
-  color:#9c844c
+  color: #C9A227;
 }
 
-
-.grade1 span, .grade2 span, .grade3 span, .grade4 span{
+.grade1 span,
+.grade2 span,
+.grade3 span,
+.grade4 span {
   display: flex;
 
   flex-direction: row;
 
-  border:1px solid white;
+  border: 1px solid white;
 
   height: 10px;
 
@@ -1036,7 +1073,7 @@ body.is-scrolling .scroll {
   border-radius: 50%;
 }
 
-.dot{
+.dot {
   display: flex;
 
   flex-direction: row;
@@ -1051,36 +1088,40 @@ body.is-scrolling .scroll {
 /* dot dot color styling */
 
 .grade1 .dot span:nth-child(1) {
-    background: red;
+  background: red;
 }
 
-.grade2 .dot span:nth-child(1), .grade2 .dot span:nth-child(2) {
-    background: red;
+.grade2 .dot span:nth-child(1),
+.grade2 .dot span:nth-child(2) {
+  background: red;
 }
 
-.grade3 .dot span:nth-child(1), .grade3 .dot span:nth-child(2), .grade3 .dot span:nth-child(3) {
-    background: red;
+.grade3 .dot span:nth-child(1),
+.grade3 .dot span:nth-child(2),
+.grade3 .dot span:nth-child(3) {
+  background: red;
 }
 
-.grade4 .dot span:nth-child(1), .grade4 .dot span:nth-child(2), .grade4 .dot span:nth-child(3), .grade4 .dot span:nth-child(4) {
-    background: red;
+.grade4 .dot span:nth-child(1),
+.grade4 .dot span:nth-child(2),
+.grade4 .dot span:nth-child(3),
+.grade4 .dot span:nth-child(4) {
+  background: red;
 }
 
-.grade_text{
-   display: flex;
+.grade_text {
+  display: flex;
 
-   flex-direction: column;
+  flex-direction: column;
 
-   gap: 20px;
+  gap: 20px;
 }
-
 
 /* =========================
   Sixth Section/ Name Section CSS  
 ========================= */
 
-
-.name_holder{
+.name_holder {
   display: flex;
 
   height: 59vh;
@@ -1091,28 +1132,111 @@ body.is-scrolling .scroll {
 
   width: 100%;
 
-  background-color: rgb(7, 7, 7);
+  background-color: #000900;
 
   text-transform: uppercase;
 
   overflow: hidden;
-
 }
 
-.name_holder h2{
-
+.name_holder h2 {
   margin-top: 18rem;
 
   margin-bottom: 8rem;
 
-  font-size: 28rem;
+  font-size: 28.8rem;
 
   color: transparent;
 
-  -webkit-text-stroke: 1px rgb(255, 247, 247);
+  -webkit-text-stroke: 1.5px #ffffff75;
 
   font-family: "Anton", sans-serif;
 
-  transform: scaleY(1.5);
+  transform: scaleY(1.3);
+}
 
+/* =========================
+  seventh Section/ footer Section CSS  
+========================= */
+
+.footer_side {
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: #000000;
+
+  padding: 7rem 7rem;
+
+  font-family: "Inter", sans-serif;
+}
+
+.footer_list ul {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2rem;
+
+  text-transform: uppercase;
+
+  list-style: none;
+
+}
+
+.footer_list li a {
+  text-decoration: none;
+
+  color: #ffffff;
+
+  font-size: 1.4rem;
+}
+
+.footer_list li a:hover{
+  color:#C9A227;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+
+}
+
+label{
+  font-size: 1.3rem;
+}
+
+input,
+textarea {
+  padding: 22px;
+
+  font: inherit;
+
+  font-size: 1.3rem;
+
+}
+
+textarea {
+  min-height: 150px;
+
+  resize: vertical;
+}
+
+button {
+  padding: 12px 20px;
+
+  cursor: pointer;
+
+  font-size: 1.3rem;
+}
+
+.form button:hover{
+  background:#C9A227;
 }
