@@ -1073,3 +1073,46 @@ body.is-scrolling .scroll {
 
    gap: 20px;
 }
+
+
+/* =========================
+  Sixth Section/ Name Section CSS  
+========================= */
+
+
+.name_holder{
+  display: flex;
+
+  height: 59vh;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  background-color: rgb(7, 7, 7);
+
+  text-transform: uppercase;
+
+  overflow: hidden;
+
+}
+
+.name_holder h2{
+
+  margin-top: 18rem;
+
+  margin-bottom: 8rem;
+
+  font-size: 28rem;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgb(255, 247, 247);
+
+  font-family: "Anton", sans-serif;
+
+  transform: scaleY(1.5);
+
+}

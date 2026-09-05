@@ -24,8 +24,7 @@ const updateGradeCards = () => {
 			1,
 			Math.max(0, (window.innerHeight - cardBounds.top) / (window.innerHeight * 0.65))
 		);
-		const direction = index % 2 === 0 ? -1 : 1;
-		const horizontalOffset = direction * (1 - revealProgress) * 780;
+		const horizontalOffset = (1 - revealProgress) * 780;
 
 		card.style.opacity = revealProgress.toFixed(2);
 		card.style.transform = `translateX(${horizontalOffset}px)`;
