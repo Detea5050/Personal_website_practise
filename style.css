@@ -587,6 +587,21 @@ body.is-scrolling .scroll {
   Second Section/ About  Section CSS  
 ========================= */
 
+.about_section{
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 10rem 4rem;
+
+  background: #0000;
+}
+
+
 /* =========================
   Third Section/ Service Section CSS  
 ========================= */
