@@ -24,8 +24,13 @@ body {
    HERO
 ========================= */
 
-.hero {
+.intro-stack {
   position: relative;
+}
+
+.hero {
+  position: sticky;
+  top: 0;
 
   width: 100%;
   height: 100vh;
@@ -52,6 +57,10 @@ body {
   background-position: center;
 
   transform: scale(1.05);
+
+  transform-origin: center center;
+
+  will-change: transform;
 }
 
 /* =========================
@@ -594,12 +603,125 @@ body.is-scrolling .scroll {
 
   align-items: center;
 
+  justify-content: space-between;
+
+  padding: 30rem 5.7rem;
+
+  background-color: #000000;
+
+  gap:2rem;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.about_section_title {
+  display:flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
   justify-content: center;
 
-  padding: 10rem 4rem;
+  gap: 5rem;
 
-  background: #0000;
+  position: relative;
+
+  right:10rem;
+
+  top: 2rem;
 }
+
+.about-img img{
+  width: 130%;
+
+  height: 50em;
+
+  border-radius: 20px;
+}
+
+.about-img {
+  will-change: transform, opacity;
+}
+
+.about_content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 2rem;
+
+  padding-top: 22em;
+
+  line-height: 1.5;
+}
+
+.about_content h1 {
+  font-size: clamp(30px, 6vw, 30px);
+
+  color:#C9A227;
+
+  margin-bottom: 1em;
+}
+
+
+.about_content p {
+  font-size: clamp(15px, 4.5vw, 40px);
+
+  width: 70rem;
+
+  color: whitesmoke;
+
+}
+
+.about_content a{
+  width: 170px;
+
+  height: 70px;
+
+  background-color: black;
+
+  border-radius: 20px;
+
+  border: 2px solid #C9A227;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  color:#C9A227;
+
+  font-size: clamp(15px, 4.5vw, 20px);
+
+}
+
+.about_content a:hover {
+  background-color: #C9A227;
+  color: black;
+}
+
+
+.about_section_title h1 {
+  font-size: clamp(30px, 6vw, 90px);
+
+  color: #C9A227;
+
+  margin-bottom: 1em;
+
+}
+
 
 
 /* =========================
@@ -1237,6 +1359,8 @@ button {
   cursor: pointer;
 
   font-size: 1.3rem;
+
+  border-radius: 10px;
 }
 
 .form button:hover{

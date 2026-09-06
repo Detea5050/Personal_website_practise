@@ -1,6 +1,68 @@
-@media (max-width: 900px) {
+@media (max-width: 1500px) {
   body {
     overflow-x: hidden;
+  }
+
+
+    .about_section {
+    min-height: 100svh;
+    height: auto;
+    padding: 8rem 3.5rem;
+    gap: 3rem;
+  }
+
+  .about_content {
+    width: 52%;
+    padding-top: 0;
+  }
+
+  .about_content p {
+    width: 100%;
+    font-size: clamp(15px, 2.2vw, 24px);
+  }
+
+  .about_section_title {
+    right: 0;
+    top: 0;
+    width: 48%;
+    gap: 2rem;
+  }
+
+  .about_section_title h1 {
+    font-size: clamp(42px, 7vw, 78px);
+  }
+
+  .about-img img {
+    width: 100%;
+    height: auto;
+    max-height: 34rem;
+    object-fit: cover;
+  }
+
+  .name_holder h2{
+    font-size: clamp(24px, 15vw, 86px);
+  }
+
+  .footer_side{
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+  }
+
+  .da-logo{
+    margin-bottom:5rem;
+
+  }
+
+  .name_holder h2{
+    font-size: clamp(24px, 15vw, 86px);
   }
 
   .side-line {
@@ -118,6 +180,72 @@
   .scroll,
   .scroll-line {
     display: none;
+  }
+
+  /* About */
+  .about_section {
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 100svh;
+    height: auto;
+    padding: 5rem 28px 6rem;
+    gap: 3.5rem;
+  }
+
+  .about_content {
+    width: 100%;
+    gap: 1.5rem;
+    padding-top: 0;
+  }
+
+  .about_content h1 {
+    margin-bottom: 0.25rem;
+    font-size: clamp(28px, 8vw, 42px);
+  }
+
+  .about_content p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .about_content a {
+    width: 150px;
+    height: 52px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+
+  .about_section_title {
+    right: auto;
+    top: auto;
+    width: 100%;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .about_section_title h1 {
+    margin-bottom: 0;
+    font-size: clamp(52px, 16vw, 92px);
+    line-height: 0.9;
+  }
+
+  .about-img {
+    width: min(100%, 24rem);
+    align-self: center;
+
+    position: relative;
+
+    left:-60px;
+  }
+
+  .about-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
   }
 
   /* Services */
@@ -309,6 +437,27 @@
   .cert_section {
     padding-left: 22px;
     padding-right: 22px;
+  }
+
+    .name_holder h2{
+    font-size: clamp(24px, 15vw, 86px);
+  }
+
+  .footer_side{
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+  }
+
+  .da-logo{
+    margin-bottom:5rem;
   }
 }
 
